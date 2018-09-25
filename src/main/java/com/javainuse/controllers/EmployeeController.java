@@ -45,5 +45,11 @@ public class EmployeeController {
 		return new ModelAndView("allEmployees", "employees", allEmployees);
 
 	}
+	@RequestMapping(value = "/listEmployee", method = RequestMethod.GET)
+	public ModelAndView employees4() {
+		List<Employee> allEmployees = employeeData.findAll();
+		return new ModelAndView("allEmployees", "employees", allEmployees);
+
+	}
 
 }
